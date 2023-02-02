@@ -1,30 +1,8 @@
-<div class = "container">
-  <div class = "row">
-    <div class="col-xs-12">
-      <h1>This is my website</h1>
-      <hr>
-      <app-servers></app-servers>
-      <div class="col-sm-4">
-        <app-warningalert></app-warningalert>
-      </div>
-      <div class="col-sm-4">
-        <app-successalert></app-successalert>
-      </div>
-    </div>
-  </div>
+<app-header></app-header>
+<div class="container">
   <div class="row">
-    <div class="col-xs-12">
-    <div class="col-sm-4">
-      <app-warningalert></app-warningalert>
+    <div class="col-md-12">
+      <h2>I am Working!</h2>
     </div>
-    <div class="col-sm-4">
-      <app-successalert></app-successalert>
-    </div>
-  </div>
-  <label> Username </label>
-  <input type="text" class="form-control" [(ngModel)]="username">
-  <p>{{ username }}</p>
-  <button class="btn btn-primary" [disabled]="username === ''"
-  (click)="username = ''"> Reset User </button>
   </div>
 </div>
