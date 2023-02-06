@@ -1,3 +1,13 @@
+// import { Component } from '@angular/core';
+
+// @Component({
+//   selector: 'app-root',
+//   templateUrl: './app.component.html',
+//   styleUrls: ['./app.component.css']
+// })
+// export class AppComponent {
+//   username = '';
+// }
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +16,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  username = '';
+  serverElements = [{type:'server',name:'Testserver',content:'Just a test!'}];
+
+
+
 }
+
