@@ -36,8 +36,10 @@
   <hr>
   <div class="row">
     <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onChangeFirst()">Change First Element</button>
       <app-server-element *ngFor="let ser of serverElement"
-      [element]="ser">
+      [element]="ser"
+      [name]="serverElement.name">
       <p>
         <strong *ngIf="ser.type === 'server'" style="color: red">{{ ser.content }}</strong>
         <em *ngIf="ser.type === 'blueprint'">{{ ser.content }}</em>

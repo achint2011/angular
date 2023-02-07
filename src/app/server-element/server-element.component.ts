@@ -15,7 +15,7 @@
 //   element = {type:''}
 // }
 // }
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation, OnInit, OnChanges, SimpleChanges, DoCheck, AfterContentInit, AfterContentChecked } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -23,6 +23,25 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./server-element.component.css'],
   encapsulation:ViewEncapsulation.Emulated
 })
-export class ServerElementComponent {
-@Input() element: {type:string,name:string, content:string }
+export class ServerElementComponent implements OnInit, OnChanges, DoCheck, AfterContentInit,AfterContentChecked {
+@Input() element: {type:string,name:string, content:string };
+@Input() name: string;
+constructor(){
+  console.log("Constructor Called!");
+}
+ngOnInit(){
+  console.log("ngOnInit Called!");
+}
+ngOnChanges(changes: SimpleChanges){
+  console.log("ngOnChanges Called!");
+}
+ngDoCheck(){
+  console.log("ngDocheck Called!");
+}
+ngAfterContentInit() {
+  console.log("ngAfterContentInit Called!");
+}
+ngAfterContentChecked(): void {
+  console.log("ngAfterContentChecked Called!");
+}
 }

@@ -45,7 +45,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // name='Siddhant'
    title = 'first-app';
-  serverElement=[{type:'server', name:'Testserver',content:'Just a test!'}]
+  serverElement=[{type:'server', name:'Testserver',content:'Just a test!'}];
 
   onServerAdded(serverData:{serverName:string,serverContent: string}){
     this.serverElement.push({
@@ -61,6 +61,9 @@ export class AppComponent {
       name:blueprintData.serverName,
       content:blueprintData.serverContent
     })
+  }
+  onChangeFirst(){
+    this.serverElement[0].name='Changed!';
   }
 
 }
