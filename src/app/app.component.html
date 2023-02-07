@@ -1,50 +1,7 @@
-<!-- <app-header></app-header>
+<app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
-    </div>
-  </div>
-</div> -->
-<!-- <div class="container">
-  <app-cockpit
-  (serverCreated)="onServerAdded($event)"
-  (bpCreated)="onBlueprintAdded($event)"
-  ></app-cockpit>
-  <hr>
-  <div class="row">
-    <div class="col-xs-12">
-      <app-server-element
-      *ngFor="let serverElement of serverElements"
-      [srvElement]="severElement"></app-server-element>
-    </div>
-  </div>
-</div> -->
-<!-- <h1>I am in the app Component</h1>
-<app-servers></app-servers> -->
-
-
-<!-- <h1>I am in the app Component</h1>
-<app-servers></app-servers> -->
-
-
-<div class="container">
-  <app-cockpit (servercreated)="onServerAdded($event)"
-  (blueprintCreated)="onBlueprintAdded($event)"
-  ></app-cockpit>
-  <hr>
-  <div class="row">
-    <div class="col-xs-12">
-      <button class="btn btn-primary" (click)="onChangeFirst()">Change First Element</button>
-      <app-server-element *ngFor="let ser of serverElement"
-      [element]="ser"
-      [name]="serverElement.name">
-      <p>
-        <strong *ngIf="ser.type === 'server'" style="color: red">{{ ser.content }}</strong>
-        <em *ngIf="ser.type === 'blueprint'">{{ ser.content }}</em>
-      </p>
-    </app-server-element>
-    </div>
-  </div>
+  <div class="row"><div class="col-md-12">
+     <app-recipes *ngIf = "loadedFeature === 'recipe' "></app-recipes>
+    <app-shopping-list *ngIf = "loadedFeature !== 'recipe' "></app-shopping-list>
+  </div></div>
 </div>
