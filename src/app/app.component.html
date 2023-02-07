@@ -7,16 +7,35 @@
     </div>
   </div>
 </div> -->
-<div class="container">
-  <app-cockpit {serverCreated}="onServerAdded($event)"
-  {blueprintCreated}="onBlueprintAdded($event)"
+<!-- <div class="container">
+  <app-cockpit
+  (serverCreated)="onServerAdded($event)"
+  (bpCreated)="onBlueprintAdded($event)"
   ></app-cockpit>
   <hr>
   <div class="row">
     <div class="col-xs-12">
       <app-server-element
       *ngFor="let serverElement of serverElements"
-      [element]="severElement"></app-server-element>
+      [srvElement]="severElement"></app-server-element>
+    </div>
+  </div>
+</div> -->
+<!-- <h1>I am in the app Component</h1>
+<app-servers></app-servers> -->
+
+
+<div class="container">
+  <app-cockpit (servercreated)="onServerAdded($event)"
+  (blueprintCreated)="onBlueprintAdded($event)"
+  ></app-cockpit>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-server-element *ngFor="let ser of serverElement"
+      [element]="ser">
+
+    </app-server-element>
     </div>
   </div>
 </div>
