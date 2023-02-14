@@ -13,6 +13,6 @@ export class RecipeItemComponent implements OnInit {
     this.recipeSelected.emit();
   }
   ngOnInit(){
-
+    
   }
 }
