@@ -16,8 +16,6 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { DropdownDirective } from './shared/dropdown.directive';
-import { AccountComponent } from './account/account.component';
-import { NewAccountComponent } from './new-account/new-account.component';
 
 @NgModule({
   declarations: [
@@ -35,9 +33,7 @@ import { NewAccountComponent } from './new-account/new-account.component';
     ShoppingListComponent,
     ShoppingEditComponent,
     BetterHighlightDirective,
-    DropdownDirective,
-    AccountComponent,
-    NewAccountComponent
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
