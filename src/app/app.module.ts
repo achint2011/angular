@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component';
+import { ServerComponent } from './servers/server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { WarningalertComponent } from './warningalert/warningalert.component';
 import { SuccessalertComponent } from './successalert/successalert.component';
@@ -17,6 +17,11 @@ import { BasicHighlightDirective } from './basic-highlight/basic-highlight.direc
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { EditServerComponent } from './servers/edit-server/edit-server.component';
+import { UsersComponent } from './users/users.component';
+import { UserComponent } from './users/user/user.component';
+import { HomeComponent } from './home/home.component';
+import { ServersService } from './servers/servers.service';
 
 @NgModule({
   declarations: [
@@ -34,13 +39,18 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     ShoppingListComponent,
     ShoppingEditComponent,
     BetterHighlightDirective,
-    DropdownDirective
+    DropdownDirective,
+    EditServerComponent,
+    UsersComponent,
+    UserComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [ShoppingListService],
+  providers: [ShoppingListService,
+  ServersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
