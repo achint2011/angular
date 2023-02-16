@@ -22,6 +22,13 @@ import { UsersComponent } from './users/users.component';
 import { UserComponent } from './users/user/user.component';
 import { HomeComponent } from './home/home.component';
 import { ServersService } from './servers/servers.service';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  {path:'', component: HomeComponent},
+  {path:'users', component: UsersComponent},
+  {path:'servers', component: ServersComponent},
+];
 
 @NgModule({
   declarations: [
@@ -47,7 +54,8 @@ import { ServersService } from './servers/servers.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ShoppingListService,
   ServersService],
