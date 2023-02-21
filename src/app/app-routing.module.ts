@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGaurd } from './auth-guard.service';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { EditServerComponent } from './servers/edit-server/edit-server.component';
@@ -15,7 +15,7 @@ const appRoutes : Routes = [
     {path : ':id/:name' , component : UserComponent}
   ]},
 
-  {path : 'servers' , component : ServersComponent , children : [
+  {path : 'servers' , canActivate: [AuthGaurd], component : ServersComponent , children : [
     {path : ':id/edit' , component : EditServerComponent},
     {path : ':id' , component : ServerComponent}
   ]},
