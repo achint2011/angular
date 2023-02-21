@@ -15,7 +15,10 @@ const appRoutes : Routes = [
     {path : ':id/:name' , component : UserComponent}
   ]},
 
-  {path : 'servers' , canActivate: [AuthGaurd], component : ServersComponent , children : [
+  {path : 'servers' ,
+  //  canActivate: [AuthGaurd],
+  canActivateChild : [AuthGaurd],
+   component : ServersComponent , children : [
     {path : ':id/edit' , component : EditServerComponent},
     {path : ':id' , component : ServerComponent}
   ]},
