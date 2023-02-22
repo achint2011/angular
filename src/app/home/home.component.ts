@@ -13,11 +13,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   constructor() {
   }
-
   ngOnInit() {
-    // this.firstObsSubscription = interval(1000).subscribe(count => {
-    //   console.log(count);
-    // });
     const customIntervalObservable = Observable.create(observer => {
       let count = 0;
       setInterval(() => {
