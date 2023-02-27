@@ -8,6 +8,7 @@
 // export class AppComponent {
 // }
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   suggestUserName() {
     const suggestedName = 'Superuser';
+  }
+  onSubmit(form: NgForm){
+    console.log(form);
   }
 }
 
