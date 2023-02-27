@@ -19,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ShortenPipe } from './shorten.pipe';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BetterHighlightDirective,
     DropdownDirective,
     RecipeStartComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    ShortenPipe
   ],
   imports: [
     BrowserModule,
