@@ -20,6 +20,7 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ShortenPipe } from './shorten.pipe';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ShortenPipe } from './shorten.pipe';
     DropdownDirective,
     RecipeStartComponent,
     RecipeEditComponent,
-    ShortenPipe
+    ShortenPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
